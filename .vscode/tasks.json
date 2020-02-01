@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/project/backend/src/main.cpp",
+                "${workspaceFolder}/project/backend/src/properties.cpp",
+                "${workspaceFolder}/project/backend/src/utility.cpp",
+                "${workspaceFolder}/project/UI/src/ui.cpp",
+                "-o",
+                "${workspaceFolder}/house_hunters",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-I${workspaceFolder}/project/backend/include",
+                "-I${workspaceFolder}/project/UI/include"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
