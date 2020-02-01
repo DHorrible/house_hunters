@@ -1,10 +1,15 @@
 #pragma once
 
 #include "share.hpp"
+#include "ui.hpp"
 
 #include "SFML/Graphics.hpp"
 
 #include <string>
+
+class WinProp;
+class GlobalProp;
+class PlayerProp;
 
 class WinProp {
 private:
@@ -28,23 +33,27 @@ public:
 
 class GeneralProp {
 private:
-    static sf::Font font;
-
+    inline static PlayerProp* player = nullptr;
 
     GeneralProp();
 public:
-    static void setProp();
+    static void setProp(
+        PlayerProp* player
+        );
 
-    static sf::Font getFont();
+    static PlayerProp* getPlayer();
 };
 
 class PlayerProp {
 private:
     size_t amount;
+    Scene* scene;
 public:
     size_t getAmount() const;
+    Scene* getScene() const; 
 
     PlayerProp(
-        size_t amount = START_AMOUNT 
+        size_t amount = START_AMOUNT,
+        Scene* scene = nullptr 
         );
 };

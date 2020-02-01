@@ -31,21 +31,28 @@ std::string WinProp::getTitle() const {
 GeneralProp::GeneralProp()
 {}
 
-void GeneralProp::setProp() {
-    
+void GeneralProp::setProp(
+    PlayerProp* player
+    ) {
+    GeneralProp::player = player;
 }
 
-sf::Font GeneralProp::getFont() {
-    return GeneralProp::font;
+PlayerProp* GeneralProp::getPlayer() {
+    return GeneralProp::player;
 }
 
 // PlayerProp
 
 PlayerProp::PlayerProp(
-    size_t amount
-    ) : amount(amount)
+    size_t amount,
+    Scene* scene
+    ) : amount(amount), scene(scene)
 {}
 
 size_t PlayerProp::getAmount() const {
     return this->amount;
+}
+
+Scene* PlayerProp::getScene() const {
+    return this->scene;
 }

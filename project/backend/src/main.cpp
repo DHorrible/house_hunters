@@ -8,8 +8,9 @@
 
 int main() {
     WinProp prop;
-
-    GeneralProp::setProp();
+    Scene scene;
+    PlayerProp player(START_AMOUNT, &scene);
+    GeneralProp::setProp(&player);
 
     sf::RenderWindow window(sf::VideoMode(prop.getWidth(), prop.getHeight()), prop.getTitle());
 
@@ -18,7 +19,7 @@ int main() {
     while (window.isOpen()) {
         update();
 
-        window.clear();
+        window.clear(sf::Color(sf::Color::White));
         draw(window);
         window.display();
     }
