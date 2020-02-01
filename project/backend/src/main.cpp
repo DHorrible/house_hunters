@@ -17,9 +17,9 @@ int main() {
 
     while (window.isOpen()) {
         update();
-        draw(window);
 
         window.clear();
+        draw(window);
         window.display();
     }
 
