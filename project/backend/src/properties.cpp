@@ -1,5 +1,7 @@
 #include "properties.hpp"
 
+// WinProp
+
 WinProp::WinProp(
     size_t width,
     size_t height,
@@ -24,3 +26,13 @@ std::string WinProp::getTitle() const {
     return this->title;
 }
 
+// PlayerProp
+
+PlayerProp::PlayerProp(
+    size_t amount
+    ) : amount(amount)
+{}
+
+size_t PlayerProp::getAmount() const {
+    return this->amount;
+}

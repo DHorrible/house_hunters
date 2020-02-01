@@ -1,5 +1,7 @@
 #pragma once
 
+#include "share.hpp"
+
 #include <string>
 
 class WinProp {
@@ -15,9 +17,20 @@ public:
     std::string getTitle() const;
 
     WinProp(
-        size_t width = 720,
-        size_t height = 1080,
-        size_t fps = 30,
-        const std::string& title = "House hunters"
+        size_t width = STD_WIDTH,
+        size_t height = STD_HEIGHT,
+        size_t fps = STD_FPS,
+        const std::string& title = STD_TITLE
+        );
+};
+
+class PlayerProp {
+private:
+    size_t amount;
+public:
+    size_t getAmount() const;
+
+    PlayerProp(
+        size_t amount = START_AMOUNT 
         );
 };
