@@ -2,6 +2,8 @@
 
 #include "share.hpp"
 
+#include "SFML/Graphics.hpp"
+
 #include <string>
 
 class WinProp {
@@ -22,6 +24,18 @@ public:
         size_t fps = STD_WIN_FPS,
         const std::string& title = STD_WIN_TITLE
         );
+};
+
+class GeneralProp {
+private:
+    static sf::Font font;
+
+
+    GeneralProp();
+public:
+    static void setProp();
+
+    static sf::Font getFont();
 };
 
 class PlayerProp {

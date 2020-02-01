@@ -9,6 +9,8 @@
 int main() {
     WinProp prop;
 
+    GeneralProp::setProp();
+
     sf::RenderWindow window(sf::VideoMode(prop.getWidth(), prop.getHeight()), prop.getTitle());
 
     window.setFramerateLimit(prop.getFps());

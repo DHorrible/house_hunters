@@ -26,6 +26,19 @@ std::string WinProp::getTitle() const {
     return this->title;
 }
 
+// GeneralProp
+
+GeneralProp::GeneralProp()
+{}
+
+void GeneralProp::setProp() {
+    
+}
+
+sf::Font GeneralProp::getFont() {
+    return GeneralProp::font;
+}
+
 // PlayerProp
 
 PlayerProp::PlayerProp(
