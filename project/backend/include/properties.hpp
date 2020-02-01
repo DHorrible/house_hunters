@@ -17,10 +17,10 @@ public:
     std::string getTitle() const;
 
     WinProp(
-        size_t width = STD_WIDTH,
-        size_t height = STD_HEIGHT,
-        size_t fps = STD_FPS,
-        const std::string& title = STD_TITLE
+        size_t width = STD_WIN_WIDTH,
+        size_t height = STD_WIN_HEIGHT,
+        size_t fps = STD_WIN_FPS,
+        const std::string& title = STD_WIN_TITLE
         );
 };
 
